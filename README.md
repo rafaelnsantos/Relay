@@ -5,7 +5,7 @@ Relay library for Arduino.
 designed using <a href="http://fritzing.org/home/">fritzing </a>
 
 # normally closed
-![alt tag](http://i.imgur.com/o5Nc84f.png)
+![alt tag](http://i.imgur.com/94be68T.png)
 
 # normally open
-![alt tag](http://i.imgur.com/jLtlQku.png)
+![alt tag](http://i.imgur.com/5AWMhpd.png)
