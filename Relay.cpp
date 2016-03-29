@@ -1,22 +1,18 @@
-// 
-// 
-// 
-
 #include "Relay.h"
 
 Relay::Relay(){}
 
-Relay::Relay(int p, bool normallyOpen){
+Relay::Relay(int p, bool isNormallyOpen){
 	pin = p;
-	isNormallyOpen = normallyOpen;
+	normallyOpen = isNormallyOpen;
 }
 
 void Relay::begin(){
 	pinMode(pin, OUTPUT);
 }
 
-void Relay::setIsNormallyOpen(bool is){
-	isNormallyOpen = is;
+void Relay::setIsNormallyOpen(bool isNormallyOpen){
+	normallyOpen = isNormallyOpen;
 }
 
 void Relay::setPin(int p){
@@ -26,29 +22,30 @@ int Relay::getPin(){
 	return pin;
 }
 bool Relay::getState(){
-	if (isNormallyOpen){
+	//if (normallyOpen){
 		return state;
-	}
-	else {
-		return !state;
-	}
+	//}
+	//else {
+		//return !state;
+	//}
 }
 void Relay::turnOn(){
-	if (isNormallyOpen){
-		state = true;
-	} else {
+	if (normallyOpen){
+		if (state == !true) return;
 		state = !true;
+	} else {
+		if (state == true) return;
+		state = true;
 	}
 	digitalWrite(pin, state);
 }
 void Relay::turnOff(){
-	if (isNormallyOpen){
-		state = false;
-	} else {
+	if (normallyOpen){
+		if (state == !false) return;
 		state = !false;
+	} else {
+		if (state == false) return;
+		state = false;
 	}
 	digitalWrite(pin, state);
 }
-
-//RelayClass Relay;
-
