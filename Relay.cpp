@@ -22,12 +22,12 @@ int Relay::getPin(){
 	return pin;
 }
 bool Relay::getState(){
-	//if (normallyOpen){
+	if (normallyOpen){
+		return !state;
+	}
+	else {
 		return state;
-	//}
-	//else {
-		//return !state;
-	//}
+	}
 }
 void Relay::turnOn(){
 	if (normallyOpen){
