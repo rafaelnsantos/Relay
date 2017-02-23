@@ -11,16 +11,6 @@ void Relay::begin(){
 	pinMode(pin, OUTPUT);
 }
 
-void Relay::setIsNormallyOpen(bool isNormallyOpen){
-	normallyOpen = isNormallyOpen;
-}
-
-void Relay::setPin(int p){
-	pin = p;
-}
-int Relay::getPin(){
-	return pin;
-}
 bool Relay::getState(){
 	if (normallyOpen){
 		return !state;

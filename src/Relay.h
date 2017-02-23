@@ -16,9 +16,6 @@ class Relay
 	 Relay();
 	 Relay(int p, bool isNormallyOpen);
 	 void begin();
-	 void setIsNormallyOpen(bool isNormallyOpen);
-	 void setPin(int p);
-	 int getPin();
 	 bool getState();
 	 void turnOn();
 	 void turnOff();
